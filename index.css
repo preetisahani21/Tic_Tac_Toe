@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.hide {
+  display: none;
+}
+body {
+  background: lavender;
+}
+.players {
+  display: flex;
+  margin-top: 50px;
+  font-family: sans-serif;
+  justify-content: center;
+}
+h4 {
+  margin-right: 30px;
+}
+input {
+  margin-right: 40px;
+}
+.button1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+button {
+  block-size: 50px;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  box-shadow: #065e12;
+  border: none;
+  background: rgba(39, 7, 68, 0.753);
+  font: 20px Arial bold, sans-serif;
+}
+#game-container {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+}
+#container {
+  background: rgb(182, 165, 209);
+  border-radius: 25px;
+}
+.title {
+  text-align: center;
+}
+.title span {
+  color: white;
+}
+.status-action {
+  display: flex;
+  margin-top: 25px;
+  font-size: 25px;
+  justify-content: space-around;
+}
+.status {
+  color: black;
+}
+.reset {
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: white;
+}
+.game-grid {
+  background: rgba(33, 5, 49, 0.233);
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  border-radius: 10px;
+  border: solid 3px rgba(33, 5, 49, 0.233);
+}
+.game-cell {
+  height: 120px;
+  width: 120px;
+  background: rgb(199, 170, 245);
+  cursor: pointer;
+  align-content: center;
+  justify-content: center;
+}
+
+.won::after {
+  color: #065e12;
+}
+
+@media only screen and (max-width: 1024px) {
+  .game-grid {
+    margin-top: 25px;
+  }
+
+  .game-cell {
+    height: 150px;
+    width: 150px;
+  }
+
+  .x::after {
+    font-size: 150px;
+  }
+
+  .o::after {
+    font-size: 175px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    margin: 25px;
+    padding: 25px;
+  }
+
+  .game-cell {
+    height: 100px;
+    width: 100px;
+  }
+
+  .x::after {
+    font-size: 100px;
+  }
+
+  .o::after {
+    font-size: 125px;
+  }
+}
+#dimension {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+h1 {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 20px;
+  background: rgba(33, 5, 49, 0.233);
+}
+span {
+  color: white;
+}
+
+.row {
+  background: rgba(33, 5, 49, 0.233);
+  display: flex;
+  flex-direction: row;
+}
+.cell {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(199, 170, 245);
+  border-radius: 5px;
+  margin: 5px 5px 5px 5px;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.x,
+.o {
+  cursor: cell;
+}
+.x::after {
+  content: "×";
+  font-size: 100px;
+}
+
+.o::after {
+  content: "○";
+  color: #f2ebd3;
+  font-size: 100px;
+}
